@@ -19,14 +19,14 @@ class Item: NSObject {
     convenience init(random: Bool) {
         if random {
             let advectives = ["Fluffy", "Rusty", "Shiny"]
-            let colour = ["Brown", "Green", "Blue"]
+            let colour = ["Brown", "Green", "Blue", "Red", "Purple", "Cyan"]
             let nouns = ["Bear", "Spork", "Mac"]
             
             func randomWord(_ arrayOfWords: [String]) -> String {
                 return arrayOfWords[Int(arc4random_uniform(UInt32(arrayOfWords.count)))]
             }
             
-            let randomName = "\(randomWord(advectives)) \(randomWord(colour))"
+            let randomName = "\(randomWord(advectives)) \(randomWord(colour)) \(randomWord(nouns))"
             let randomSerialNumber = UUID().uuidString.components(separatedBy: "-").first!
             let randomValue = Int(arc4random_uniform(100))
             
