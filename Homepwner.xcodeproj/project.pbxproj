@@ -16,6 +16,7 @@
 		0D22920D1E6AD09800D652FB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D22920C1E6AD09800D652FB /* ItemsViewController.swift */; };
 		0D22920F1E6AD30600D652FB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D22920E1E6AD30600D652FB /* Item.swift */; };
 		0D2292111E6AE28000D652FB /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2292101E6AE28000D652FB /* ItemStore.swift */; };
+		0D448E051E7454AF0026FF11 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D448E041E7454AF0026FF11 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0D22920C1E6AD09800D652FB /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		0D22920E1E6AD30600D652FB /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
 		0D2292101E6AE28000D652FB /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		0D448E041E7454AF0026FF11 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				0D22920C1E6AD09800D652FB /* ItemsViewController.swift */,
 				0D22920E1E6AD30600D652FB /* Item.swift */,
 				0D2292101E6AE28000D652FB /* ItemStore.swift */,
+				0D448E041E7454AF0026FF11 /* ItemCell.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				0D22920F1E6AD30600D652FB /* Item.swift in Sources */,
 				0D2292111E6AE28000D652FB /* ItemStore.swift in Sources */,
 				0D2291DF1E6ACDBA00D652FB /* AppDelegate.swift in Sources */,
+				0D448E051E7454AF0026FF11 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
 				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +444,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = EF4UQ57PCN;
 				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.honeyball.Homepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +527,7 @@
 				0D2292051E6ACDBA00D652FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D2292061E6ACDBA00D652FB /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +536,7 @@
 				0D2292081E6ACDBA00D652FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D2292091E6ACDBA00D652FB /* Build configuration list for PBXNativeTarget "HomepwnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +545,7 @@
 				0D22920B1E6ACDBA00D652FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

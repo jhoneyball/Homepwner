@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,30 +18,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="WRO-bv-xdD">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX8-Nd-GRD">
+                                    <rect key="frame" x="8" y="15" width="175.5" height="30"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="toggleEditMode:" destination="ukw-o7-V7d" eventType="touchUpInside" id="VYS-4O-ZkL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY4-Y9-A3K">
+                                    <rect key="frame" x="191.5" y="15" width="175.5" height="30"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewItem:" destination="ukw-o7-V7d" eventType="touchUpInside" id="nLH-g0-q4q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="oX8-Nd-GRD" firstAttribute="centerY" secondItem="WRO-bv-xdD" secondAttribute="centerY" id="0gG-8a-fug"/>
+                                <constraint firstItem="oX8-Nd-GRD" firstAttribute="leading" secondItem="WRO-bv-xdD" secondAttribute="leading" constant="8" id="GhD-u1-x4q"/>
+                                <constraint firstAttribute="trailing" secondItem="nY4-Y9-A3K" secondAttribute="trailing" constant="8" id="Ofq-Hf-BX0"/>
+                                <constraint firstItem="nY4-Y9-A3K" firstAttribute="width" secondItem="oX8-Nd-GRD" secondAttribute="width" id="X2B-81-AkE"/>
+                                <constraint firstItem="nY4-Y9-A3K" firstAttribute="leading" secondItem="oX8-Nd-GRD" secondAttribute="trailing" constant="8" id="aPL-WK-CaL"/>
+                                <constraint firstItem="nY4-Y9-A3K" firstAttribute="centerY" secondItem="WRO-bv-xdD" secondAttribute="centerY" id="eMF-cB-Q5g"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UITableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="8Kf-k8-tON" detailTextLabel="ya2-h3-teH" style="IBUITableViewCellStyleValue1" id="XUY-vq-uZd">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="XUY-vq-uZd" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XUY-vq-uZd" id="0LK-gI-vRc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Kf-k8-tON">
-                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-nz-gXa">
+                                            <rect key="frame" x="8" y="8" width="91" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ya2-h3-teH">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-ui-uaG">
+                                            <rect key="frame" x="279" y="22" width="88" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Serial Number Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kz-vk-lcX">
+                                            <rect key="frame" x="8" y="40" width="122.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GSW-nz-gXa" firstAttribute="top" secondItem="0LK-gI-vRc" secondAttribute="topMargin" id="9RM-ZK-yEX"/>
+                                        <constraint firstItem="GSW-nz-gXa" firstAttribute="leading" secondItem="0LK-gI-vRc" secondAttribute="leadingMargin" id="Mdb-OC-DZa"/>
+                                        <constraint firstItem="a5w-ui-uaG" firstAttribute="centerY" secondItem="0LK-gI-vRc" secondAttribute="centerY" id="OA0-DO-Ewi"/>
+                                        <constraint firstItem="7Kz-vk-lcX" firstAttribute="bottom" secondItem="0LK-gI-vRc" secondAttribute="bottomMargin" id="cCe-o4-7qY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="a5w-ui-uaG" secondAttribute="trailing" id="lJF-kn-dWL"/>
+                                        <constraint firstItem="7Kz-vk-lcX" firstAttribute="leading" secondItem="GSW-nz-gXa" secondAttribute="leading" id="wE3-EG-egA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="GSW-nz-gXa" id="nFK-sv-fp8"/>
+                                    <outlet property="serialNumberLabel" destination="7Kz-vk-lcX" id="ejS-b9-SPr"/>
+                                    <outlet property="valueLabel" destination="a5w-ui-uaG" id="9aW-1j-Y28"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
